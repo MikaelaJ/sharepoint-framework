@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "birthdays-coderight-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/birthdaysCoderight/BirthdaysCoderightWebPart.js",
+          "manifest": "./src/webparts/birthdaysCoderight/BirthdaysCoderightWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BirthdaysCoderightWebPartStrings": "lib/webparts/birthdaysCoderight/loc/{locale}.js"
+  }
+}
