@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styles from './BirthdaysCoderight.module.scss';
 import type { IBirthdaysCoderightProps } from './IBirthdaysCoderightProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
@@ -9,15 +8,15 @@ const BirthdaysCoderight: React.FunctionComponent<IBirthdaysCoderightProps> = (p
     description,
     isDarkTheme,
     environmentMessage,
-    hasTeamsContext,
+    /* hasTeamsContext, */
     userDisplayName
   } = props ?? {};
 
   return (
-    <section className={`${styles.birthdaysCoderight} ${hasTeamsContext ? styles.teams : ''}`}>
-      <div className={styles.welcome}>
-        <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-        <h2>Välkommen, {escape(userDisplayName)}!</h2>
+    <section className="">
+      <div className="">
+        <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className="" />
+        <h2 className="tw-text-white">Välkommen, {escape(userDisplayName)}!</h2>
         <div>{environmentMessage}</div>
         <div>Web part property value: <strong>{escape(description)}</strong></div>
       </div>
@@ -27,8 +26,8 @@ const BirthdaysCoderight: React.FunctionComponent<IBirthdaysCoderightProps> = (p
           The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It&#39;s the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
         </p>
         <h4>Learn more about SPFx development:</h4>
-        <ul className={styles.links}>
-          <li><a href="https://aka.ms/spfx" target="_blank" rel="noreferrer">SharePoint Framework Overview</a></li>
+        <ul className="">
+          <li><a className="tw-text-primary-coderight tw-no-underline hover:tw-underline" href="https://aka.ms/spfx" target="_blank" rel="noreferrer">SharePoint Framework Overview</a></li>
           <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank" rel="noreferrer">Use Microsoft Graph in your solution</a></li>
           <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank" rel="noreferrer">Build for Microsoft Teams using SharePoint Framework</a></li>
           <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank" rel="noreferrer">Build for Microsoft Viva Connections using SharePoint Framework</a></li>

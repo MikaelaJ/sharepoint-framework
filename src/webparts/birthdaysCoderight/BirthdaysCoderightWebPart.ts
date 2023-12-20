@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'BirthdaysCoderightWebPartStrings';
 import BirthdaysCoderight from './components/BirthdaysCoderight';
 import { IBirthdaysCoderightProps } from './components/IBirthdaysCoderightProps';
+import '../../../assets/dist/tailwind.css';
 
 export interface IBirthdaysCoderightWebPartProps {
   description: string;
